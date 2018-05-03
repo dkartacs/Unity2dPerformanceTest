@@ -7,46 +7,23 @@ public class FollowPath : MonoBehaviour {
     public Rigidbody2D rd;
     public Seeker seeker;
     public int force = 100;
-    public float applyMovementRate = 5;
     public float pathUpdateRate = 2f;
-    public float switchWaypointDistance = 2;
     private GameObject target;
-    private Path path;
-    private int currentWaypoint;
 
 	void Start () {
         target = GameObject.Find("Tower");
-        StartCoroutine(UpdatePath());
-        InvokeRepeating("Move", 0, 1 / applyMovementRate);
+        InvokeRepeating("UpdatePath", 0, 1 / pathUpdateRate);
     }
-	
-	private IEnumerator UpdatePath () {
+
+    private void UpdatePath () {
         seeker.StartPath(transform.position, target.transform.position, OnPathComplete);
-        yield return new WaitForSeconds(1f/ pathUpdateRate);
-        StartCoroutine(UpdatePath());
     }
 
-    private void OnPathComplete(Path p)
+    private void OnPathComplete(Path path)
     {
-        path = p;
-        currentWaypoint = 0;
-    }
-
-    private void Move()
-    {
-        if (path == null) return;
-        if (currentWaypoint >= path.vectorPath.Count) {
-            //Debug.Log("No movement: " + currentWaypoint + " " + path.vectorPath.Count);
-            return;
-        }
-        //try out what if i store it here
-        //Vector3 targetPosition = path.vectorPath[currentWaypoint];
-
-        rd.AddForce((path.vectorPath[currentWaypoint] - transform.position) * force * Time.deltaTime);
-        float distanceToTargetWaypoint = Vector3.Distance(transform.position, path.vectorPath[currentWaypoint]);
-        if (distanceToTargetWaypoint< switchWaypointDistance) {
-            currentWaypoint++;
-            return;
-        }
+        //(path.vectorPath[1] - transform.position) -> this basically gives the direction
+        //Time.deltaTime -> this normalizes the speed. This is needed otherwise different framerates fuck up the calculation
+        //- ((Vector3)rd.velocity) -> makes the speed constant (otherwise we just continuously adding force and Newton fucks up everything.)
+        rd.AddForce((path.vectorPath[1] - transform.position) * force * Time.deltaTime - ((Vector3)rd.velocity));
     }
 }

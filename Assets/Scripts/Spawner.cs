@@ -7,7 +7,10 @@ public class Spawner : MonoBehaviour {
     public float rate = 1.0f;
 
 	void Start () {
-        InvokeRepeating("Spawn", 0, 1/rate);
+        if (performanceMonitor == null) {
+            performanceMonitor = GameObject.Find("PerformanceMonitor").GetComponent<PerformanceMonitor>();
+        }
+        InvokeRepeating("Spawn", 1, 1/rate);
     }
 
     private void Spawn()

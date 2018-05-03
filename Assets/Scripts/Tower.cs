@@ -10,7 +10,10 @@ public class Tower : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        InvokeRepeating("Remove", 0, 1 / rate);
+        if (performanceMonitor == null) {
+            performanceMonitor = GameObject.Find("PerformanceMonitor").GetComponent<PerformanceMonitor>();
+        }
+        InvokeRepeating("Remove", 1, 1 / rate);
     }
 	
 	// Update is called once per frame
