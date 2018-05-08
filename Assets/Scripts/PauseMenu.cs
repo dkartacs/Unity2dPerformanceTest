@@ -11,11 +11,11 @@ public class PauseMenu : MonoBehaviour {
         //There is some wierd unity shit, and the timescale does not reset all the time (only "sometimes"...) on scene load with all the other variables
         Time.timeScale = 1f;
         InvokeRepeating("CheckFps", 3, 0.5f);
-        Invoke("TimeOut", 30);
+        Invoke("TimeOut", GameController.MaxRunTime);
     }
 
     void CheckFps() {
-		if(performanceMonitor.GetFps() < 20) {
+		if(performanceMonitor.GetFps() < GameController.MinFps) {
             pauseMenu.SetActive(true);
             Time.timeScale = 0f;
         }

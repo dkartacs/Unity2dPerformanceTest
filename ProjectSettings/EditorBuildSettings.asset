@@ -6,17 +6,20 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/SpawnRandomMover_1.unity
+    path: Assets/Scenes/Start.unity
+    guid: 3ae02ec14ffb7674691c6b5762d70337
+  - enabled: 1
+    path: Assets/Scenes/SpawnRandomMover_1.unity
     guid: 30d84200704d20243bd9d8ba3aa984e8
   - enabled: 1
-    path: Assets/SpawnRandomMover_2.unity
+    path: Assets/Scenes/SpawnRandomMover_2.unity
     guid: aed844eacd52b7041b2cbcceb97d0db0
   - enabled: 1
-    path: Assets/SpawnDirectedMover_1.unity
+    path: Assets/Scenes/SpawnDirectedMover_1.unity
     guid: ec02d758edc6425498cc1d0fd0f1a3c3
   - enabled: 1
-    path: Assets/SpawnAStarMover_1.unity
+    path: Assets/Scenes/SpawnAStarMover_1.unity
     guid: c980dee1e7b511c4094b13fdb4454002
   - enabled: 1
-    path: Assets/SpawnAStarMover_2.unity
+    path: Assets/Scenes/SpawnAStarMover_2.unity
     guid: 023e892bf6b7f2049a38900ec797a214

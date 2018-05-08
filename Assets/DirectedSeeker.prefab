@@ -118,10 +118,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rd: {fileID: 50023331573474108}
   seeker: {fileID: 114283080902231016}
-  force: 150
-  applyMovementRate: 10
-  pathUpdateRate: 2
-  switchWaypointDistance: 2
+  force: 500
+  pathUpdateRate: 20
 --- !u!212 &212472260252074168
 SpriteRenderer:
   m_ObjectHideFlags: 1
