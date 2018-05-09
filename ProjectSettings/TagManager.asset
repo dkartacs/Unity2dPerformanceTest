@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Starfish
   - Enemy
+  - WayPoint
   layers:
   - Default
   - TransparentFX
