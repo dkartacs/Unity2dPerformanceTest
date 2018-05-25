@@ -12,6 +12,7 @@ public class Preloader : MonoBehaviour {
         }
         for(int i = 0; i < numberOfSpawn; i++) {
             Instantiate(spawnedObject, new Vector2(Random.Range(-10f, 10f), Random.Range(-5.5f, 5.5f)), transform.rotation);
+            //Instantiate(spawnedObject, new Vector3(Random.Range(100f, 1000f), Random.Range(-5.5f, 5.5f), 5f), transform.rotation);
             performanceMonitor.Increase();
         }
     }

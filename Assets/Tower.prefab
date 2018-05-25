@@ -56,6 +56,7 @@ MonoBehaviour:
   radius: 5
   laserLifetime: 0.1
   lineSpawner: {fileID: 0}
+  performanceMonitor: {fileID: 0}
 --- !u!212 &212361049260141962
 SpriteRenderer:
   m_ObjectHideFlags: 1
