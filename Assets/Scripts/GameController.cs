@@ -3,7 +3,7 @@
 public static class GameController {
 
     private static float minFps = 20;
-    private static float maxRunTime = 120;
+    private static float maxRunTime = 35;
 
     public static float MinFps {
         get {
