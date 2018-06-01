@@ -364,6 +364,7 @@ MonoBehaviour:
     type: 2}
   performanceMonitor: {fileID: 0}
   rate: 20
+  spawnedAtOnce: 1
 --- !u!1 &120865602
 GameObject:
   m_ObjectHideFlags: 0
@@ -536,6 +537,7 @@ MonoBehaviour:
     type: 2}
   performanceMonitor: {fileID: 0}
   rate: 100
+  spawnedAtOnce: 1
 --- !u!1 &211043563
 GameObject:
   m_ObjectHideFlags: 0
@@ -583,6 +585,7 @@ MonoBehaviour:
     type: 2}
   performanceMonitor: {fileID: 0}
   rate: 100
+  spawnedAtOnce: 1
 --- !u!1 &214161753
 GameObject:
   m_ObjectHideFlags: 0
@@ -630,6 +633,7 @@ MonoBehaviour:
     type: 2}
   performanceMonitor: {fileID: 0}
   rate: 10
+  spawnedAtOnce: 2
 --- !u!4 &224873538
 Transform:
   m_ObjectHideFlags: 0
@@ -701,6 +705,7 @@ MonoBehaviour:
     type: 2}
   performanceMonitor: {fileID: 0}
   rate: 80
+  spawnedAtOnce: 1
 --- !u!1 &278314856
 GameObject:
   m_ObjectHideFlags: 0
@@ -1031,6 +1036,7 @@ MonoBehaviour:
     type: 2}
   performanceMonitor: {fileID: 0}
   rate: 10
+  spawnedAtOnce: 2
 --- !u!1 &516426578
 GameObject:
   m_ObjectHideFlags: 0
@@ -1350,6 +1356,7 @@ MonoBehaviour:
     type: 2}
   performanceMonitor: {fileID: 0}
   rate: 20
+  spawnedAtOnce: 1
 --- !u!1 &708304589
 GameObject:
   m_ObjectHideFlags: 0
@@ -1570,10 +1577,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7aa794667548ecc48b9fc17f5002ed0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rd: {fileID: 737543434}
   seeker: {fileID: 737543436}
-  force: 150
-  pathUpdateRate: 2
+  moveRate: 2
+  moveSpeed: 10
 --- !u!114 &737543436
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2910,6 +2916,7 @@ MonoBehaviour:
     type: 2}
   performanceMonitor: {fileID: 0}
   rate: 10
+  spawnedAtOnce: 2
 --- !u!1 &1993267154
 GameObject:
   m_ObjectHideFlags: 0
@@ -2957,6 +2964,7 @@ MonoBehaviour:
     type: 2}
   performanceMonitor: {fileID: 0}
   rate: 20
+  spawnedAtOnce: 1
 --- !u!1 &2001486411
 GameObject:
   m_ObjectHideFlags: 0

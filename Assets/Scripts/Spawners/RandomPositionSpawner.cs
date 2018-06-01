@@ -7,6 +7,10 @@ public class RandomPositionSpawner : MonoBehaviour
     public PerformanceMonitor performanceMonitor;
     public float rate = 1.0f;
     public float spawnedAtOnce = 1.0f;
+    public float xAxisMinimum = -10f;
+    public float xAxisMaximum = 10f;
+    public float yAxisMinimum = -5.5f;
+    public float yAxisMaximum = 5.5f;
 
     void Start()
     {
@@ -19,7 +23,7 @@ public class RandomPositionSpawner : MonoBehaviour
     private void Spawn()
     {
         for (int i = 0; i < spawnedAtOnce; i++) {
-            Instantiate(spawnedObject, new Vector2(Random.Range(-10f,10f), Random.Range(-5.5f, 5.5f)), transform.rotation);
+            Instantiate(spawnedObject, new Vector2(Random.Range(xAxisMinimum, xAxisMaximum), Random.Range(yAxisMinimum, yAxisMaximum)), transform.rotation);
             performanceMonitor.Increase();
         }
     }
